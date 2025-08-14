@@ -36,7 +36,7 @@ export class CalculatorButtonComponent {
       typeof value === 'string' ? value === '' : value,
   });
 
-  public onClick = output<string>();
+  public clickPressed = output<string>();
   public contentValue = viewChild<ElementRef<HTMLButtonElement>>('button');
 
   // @HostBinding('class.w-2/4') public get commandStyle() {
@@ -49,7 +49,7 @@ export class CalculatorButtonComponent {
     if (!buttonReference) return;
 
     const value = buttonReference.nativeElement.innerText;
-    this.onClick.emit(value);
+    this.clickPressed.emit(value);
   }
 
   public keyboardPressedStyle(key: string): void {

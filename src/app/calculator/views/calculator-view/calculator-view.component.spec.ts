@@ -1,8 +1,8 @@
 // Angular.
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 // Componentes.
-import CalculatorViewComponent from "./calculator-view.component";
+import CalculatorViewComponent from './calculator-view.component';
 
 describe('CalculatorViewComponent', () => {
   let fixture: ComponentFixture<CalculatorViewComponent>;
@@ -31,7 +31,10 @@ describe('CalculatorViewComponent', () => {
     const divElement = compiled.querySelector('div');
     const divClasses = divElement?.classList.value.split(' ');
 
-    const shouldHave = 'bg-gray-100 mx-auto overflow-hidden relative rounded-xl shadow-xl text-gray-800 w-full'.split(' ');
+    const shouldHave =
+      'bg-gray-100 mx-auto overflow-hidden relative rounded-xl shadow-xl text-gray-800 w-full'.split(
+        ' '
+      );
 
     shouldHave.forEach((cssClass: string) => {
       expect(divClasses).toContain(cssClass);

@@ -1,17 +1,17 @@
 // Angular.
-import { Component } from "@angular/core";
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { Component } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 // Componentes.
-import { CalculatorButtonComponent } from "./calculator-button.component";
+import { CalculatorButtonComponent } from './calculator-button.component';
 
 @Component({
-    imports: [CalculatorButtonComponent],
-    template: `
+  imports: [CalculatorButtonComponent],
+  template: `
     <app-calculator-button>
       <span class="projected-content underline">Test content</span>
     </app-calculator-button>
-  `
+  `,
 })
 class TestHostComponent {}
 
@@ -37,7 +37,7 @@ describe('CalculatorButtonComponent', () => {
   });
 
   it('should apply w-1/4 doublesize is false', () => {
-    const hostCssClasses: Array<string> = compiled.classList.value.split(' ');
+    const hostCssClasses: string[] = compiled.classList.value.split(' ');
 
     expect(hostCssClasses).toContain('w-1/4');
     expect(component.isDoubleSize()).toBeFalse();
@@ -47,7 +47,7 @@ describe('CalculatorButtonComponent', () => {
     fixture.componentRef.setInput('isDoubleSize', true);
     fixture.detectChanges();
 
-    const hostCssClasses: Array<string> = compiled.classList.value.split(' ');
+    const hostCssClasses: string[] = compiled.classList.value.split(' ');
 
     expect(hostCssClasses).toContain('w-2/4');
     expect(component.isDoubleSize()).toBeTrue();

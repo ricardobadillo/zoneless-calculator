@@ -8,13 +8,13 @@ import { CalculatorButtonComponent } from '../calculator-button/calculator-butto
 import { CalculatorService } from '../../services/calculator.service';
 
 @Component({
-    host: {
-        '(document:keyup)': 'handleKeyboardEvent($event)',
-    },
-    imports: [CalculatorButtonComponent],
-    selector: 'app-calculator',
-    styleUrl: './calculator.component.css',
-    templateUrl: './calculator.component.html'
+  host: {
+    '(document:keyup)': 'handleKeyboardEvent($event)',
+  },
+  imports: [CalculatorButtonComponent],
+  selector: 'app-calculator',
+  styleUrl: './calculator.component.css',
+  templateUrl: './calculator.component.html',
 })
 export class CalculatorComponent {
   private calculatorService = inject(CalculatorService);
@@ -32,7 +32,7 @@ export class CalculatorComponent {
     '7': '7',
     '8': '8',
     '9': '9',
-    'x': 'x',
+    x: 'x',
     '4': '4',
     '5': '5',
     '6': '6',
@@ -56,7 +56,8 @@ export class CalculatorComponent {
 
   // @HostListener('document:keyup', ['$event'])
   public handleKeyboardEvent(event: KeyboardEvent): void {
-    const keyValue: string | undefined = this.keyEquivalents[event.key] ?? event.key;
+    const keyValue: string | undefined =
+      this.keyEquivalents[event.key] ?? event.key;
 
     if (!keyValue) return;
 
@@ -64,7 +65,10 @@ export class CalculatorComponent {
   }
 
   public resolveButtonPress(value: string): void {
-    const pressedButton = this.calculatorButtons().find((button: CalculatorButtonComponent) => button.contentValue()?.nativeElement.innerText === value);
+    const pressedButton = this.calculatorButtons().find(
+      (button: CalculatorButtonComponent) =>
+        button.contentValue()?.nativeElement.innerText === value
+    );
 
     if (!pressedButton) return;
 

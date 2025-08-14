@@ -1,8 +1,8 @@
 // Angular.
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 // Componentes.
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -15,7 +15,7 @@ describe('AppComponent', () => {
 
     fixture = TestBed.createComponent(AppComponent);
     compiled = fixture.nativeElement;
-  })
+  });
 
   it('should create the app', () => {
     const app = fixture.componentInstance;
@@ -35,7 +35,10 @@ describe('AppComponent', () => {
   it('should render router-outlet wrapped with css classes', () => {
     const divElement = compiled.querySelector('div');
 
-    const mustHaveClasses = 'bg-slate-600 flex items-center justify-center min-h-screen min-w-screen p-5'.split(' ');
+    const mustHaveClasses =
+      'bg-slate-600 flex items-center justify-center min-h-screen min-w-screen p-5'.split(
+        ' '
+      );
     const divClasses = divElement?.classList.value.split(' ');
 
     expect(divElement).not.toBeNull();

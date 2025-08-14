@@ -1,17 +1,17 @@
 // Angular.
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { By } from "@angular/platform-browser";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 // Componentes.
-import { CalculatorComponent } from "./calculator.component";
-import { CalculatorButtonComponent } from "../calculator-button/calculator-button.component";
+import { CalculatorComponent } from './calculator.component';
 
 // Servicios.
-import { CalculatorService } from "../../services/calculator.service";
+import { CalculatorService } from '../../services/calculator.service';
 
 class MockCalculatorService {
   public resultText = jasmine.createSpy('resultText').and.returnValue('100.00');
-  public subResultText = jasmine.createSpy('subResultText').and.returnValue('0');
+  public subResultText = jasmine
+    .createSpy('subResultText')
+    .and.returnValue('0');
   public lastOperator = jasmine.createSpy('lastOperator').and.returnValue('+');
 
   public constructNumber = jasmine.createSpy('constructNumber');
@@ -27,14 +27,16 @@ describe('CalculatorComponent', () => {
     await TestBed.configureTestingModule({
       imports: [CalculatorComponent],
       providers: [
-        { provide: CalculatorService, useClass: MockCalculatorService }
-      ]
+        { provide: CalculatorService, useClass: MockCalculatorService },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CalculatorComponent);
     compiled = fixture.nativeElement;
     component = fixture.componentInstance;
-    mockCalculatorService = TestBed.inject(CalculatorService) as unknown as MockCalculatorService;
+    mockCalculatorService = TestBed.inject(
+      CalculatorService
+    ) as unknown as MockCalculatorService;
   });
 
   it('should create the app', () => {

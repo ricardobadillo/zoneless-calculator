@@ -61,13 +61,16 @@ export class CalculatorService {
         return;
       }
 
-      this.resultText.update((prevResult: string) => prevResult + '.' );
+      this.resultText.update((prevResult: string) => prevResult + '.');
       return;
     }
 
     // Manejo de el cero inicial.
-    if (value === '0' && (this.resultText() === '0' || this.resultText() === '-0')) return;
-
+    if (
+      value === '0' &&
+      (this.resultText() === '0' || this.resultText() === '-0')
+    )
+      return;
 
     // Cambiar signo.
     if (value === '+/-') {
