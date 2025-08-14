@@ -1,4 +1,5 @@
 // Angular.
+import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -18,7 +19,7 @@ import {
     // attribute: 'hola',
     // 'data-size': 'S',
   },
-  imports: [],
+  imports: [NgClass],
   selector: 'app-calculator-button',
   styleUrl: './calculator-button.component.css',
   templateUrl: './calculator-button.component.html',

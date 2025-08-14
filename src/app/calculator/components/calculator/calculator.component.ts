@@ -46,7 +46,9 @@ export class CalculatorComponent {
     Enter: '=',
   };
 
-  public handleClick(value: string): void {
+  public handleClick(value: string | Event): void {
+    if (value instanceof Event) return;
+
     const keyValue: string | undefined = this.keyEquivalents[value] ?? value;
 
     if (!keyValue) return;

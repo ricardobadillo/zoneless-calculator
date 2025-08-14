@@ -54,11 +54,11 @@ describe('CalculatorButtonComponent', () => {
   });
 
   it('should emit onClick when handleClick is called', () => {
-    spyOn(component.onClick, 'emit');
+    spyOn(component.clickPressed, 'emit');
 
     component.handleClick();
 
-    expect(component.onClick.emit).toHaveBeenCalled();
+    expect(component.clickPressed.emit).toHaveBeenCalled();
   });
 
   it('should set isPressed to true and then false when keyboardPressedStyle is called with a matching key', (done: DoneFn) => {

@@ -1,7 +1,11 @@
 <button
   #button
-  [class.is-command]="isCommand()"
-  [class.is-pressed]="isPressed()"
+  class="font-light h-16 outline-none text-opacity-50 text-xl text-white w-full focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20"
+  [ngClass]="{
+    'bg-indigo-700 bg-opacity-20': isCommand(),
+    'bg-indigo-800 bg-opacity-20': isPressed(),
+    'w-2/4': isDoubleSize(),
+  }"
   (click)="handleClick()">
   <ng-content />
 </button>
