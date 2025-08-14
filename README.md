@@ -1,6 +1,6 @@
 <img alt="Logo de Angular" src="./public/assets/images/angular-logo.svg" style="display: block; margin: 0 auto" height=200 width=600 />
 
-# Angular Skeleton App
+# Zoneless Calculator
 
 Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
 
