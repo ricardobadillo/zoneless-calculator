@@ -1,5 +1,13 @@
 // Angular.
-import { ChangeDetectionStrategy, Component, ElementRef, input, output, signal, viewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  input,
+  output,
+  signal,
+  viewChild,
+} from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,7 +20,6 @@ import { ChangeDetectionStrategy, Component, ElementRef, input, output, signal, 
   },
   imports: [],
   selector: 'app-calculator-button',
-  standalone: true,
   styleUrl: './calculator-button.component.css',
   templateUrl: './calculator-button.component.html',
 })
@@ -20,11 +27,13 @@ export class CalculatorButtonComponent {
   public isPressed = signal<boolean>(false);
 
   public isCommand = input(false, {
-    transform: (value: boolean | string) => typeof value === 'string' ? value === '' : value
+    transform: (value: boolean | string) =>
+      typeof value === 'string' ? value === '' : value,
   });
 
   public isDoubleSize = input(false, {
-    transform: (value: boolean | string) => typeof value === 'string' ? value === '' : value
+    transform: (value: boolean | string) =>
+      typeof value === 'string' ? value === '' : value,
   });
 
   public onClick = output<string>();

@@ -6,13 +6,12 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { CalculatorButtonComponent } from "./calculator-button.component";
 
 @Component({
-  imports: [CalculatorButtonComponent],
-  standalone: true,
-  template: `
+    imports: [CalculatorButtonComponent],
+    template: `
     <app-calculator-button>
       <span class="projected-content underline">Test content</span>
     </app-calculator-button>
-  `,
+  `
 })
 class TestHostComponent {}
 

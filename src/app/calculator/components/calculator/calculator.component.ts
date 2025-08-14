@@ -8,14 +8,13 @@ import { CalculatorButtonComponent } from '../calculator-button/calculator-butto
 import { CalculatorService } from '../../services/calculator.service';
 
 @Component({
-  host: {
-    '(document:keyup)': 'handleKeyboardEvent($event)',
-  },
-  imports: [CalculatorButtonComponent],
-  selector: 'app-calculator',
-  standalone: true,
-  styleUrl: './calculator.component.css',
-  templateUrl: './calculator.component.html',
+    host: {
+        '(document:keyup)': 'handleKeyboardEvent($event)',
+    },
+    imports: [CalculatorButtonComponent],
+    selector: 'app-calculator',
+    styleUrl: './calculator.component.css',
+    templateUrl: './calculator.component.html'
 })
 export class CalculatorComponent {
   private calculatorService = inject(CalculatorService);
