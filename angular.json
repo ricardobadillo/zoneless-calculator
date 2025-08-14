@@ -69,6 +69,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -94,7 +95,8 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "type": "component"
+      "type": "component",
+      "changeDetection": "OnPush"
     },
     "@schematics/angular:directive": {
       "type": "directive"

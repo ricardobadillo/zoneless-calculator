@@ -1,5 +1,11 @@
 // Angular.
-import { Component, computed, inject, viewChildren } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  inject,
+  viewChildren,
+} from '@angular/core';
 
 // Componentes.
 import { CalculatorButtonComponent } from '../calculator-button/calculator-button.component';
@@ -8,6 +14,7 @@ import { CalculatorButtonComponent } from '../calculator-button/calculator-butto
 import { CalculatorService } from '../../services/calculator.service';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '(document:keyup)': 'handleKeyboardEvent($event)',
   },

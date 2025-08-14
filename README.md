@@ -40,10 +40,10 @@ Esto compilará su proyecto y almacenará los artefactos de compilación en el d
 
 ## Ejecución de pruebas unitarias
 
-Para ejecutar pruebas unitarias con el ejecutor de pruebas [Jest](https://github.com/jestjs/jest/), use el siguiente comando:
+Para ejecutar pruebas unitarias con el ejecutor de pruebas [Jasmine](https://github.com/jasmine/jasmine/), use el siguiente comando:
 
 ```
-npm run test
+ng test
 ```
 
 ## ESLint
