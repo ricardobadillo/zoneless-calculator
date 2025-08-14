@@ -1,27 +1,61 @@
-# ZonelessCalculator
+<img alt="Logo de Angular" src="./public/assets/images/angular-logo.svg" style="display: block; margin: 0 auto" height=200 width=600 />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+# Angular Skeleton App
 
-## Development server
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Servidor de desarrollo
 
-## Code scaffolding
+Para iniciar un servidor de desarrollo local, ejecute:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+ng serve
+```
 
-## Build
+Una vez que el servidor esté en ejecución, abra su navegador y navegue a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que modifique cualquier archivo fuente.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Andamiaje del código
 
-## Running unit tests
+Angular CLI incluye potentes herramientas de andamiaje de código. Para generar un nuevo componente, ejecute:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+ng generate component component-name
+```
 
-## Running end-to-end tests
+Para obtener una lista completa de los esquemas disponibles (tales como `components`, `directives`, o `pipes`), ejecute:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+ng generate --help
+```
 
-## Further help
+## Compilación
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para compilar el proyecto, ejecute:
+
+```
+ng build
+```
+
+Esto compilará su proyecto y almacenará los artefactos de compilación en el directorio `dist/`. De forma predeterminada, la compilación de producción optimiza el rendimiento y la velocidad de su aplicación.
+
+## Ejecución de pruebas unitarias
+
+Para ejecutar pruebas unitarias con el ejecutor de pruebas [Jest](https://github.com/jestjs/jest/), use el siguiente comando:
+
+```
+npm run test
+```
+
+## ESLint
+
+Ejecute el siguiente comando:
+
+```
+ng add angular-eslint
+```
+
+```
+npm i prettier-eslint eslint-config-prettier eslint-plugin-prettier --save-dev
+```
+
+Más información de [integración de Prettier con ESLint](https://prettier.io/docs/related-projects#eslint-integrations).

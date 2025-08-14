@@ -1,15 +1,13 @@
+// Angular.
 import {
   ApplicationConfig,
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
+// Sistema de rutas.
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    // provideZoneChangeDetection({ eventCoalescing: true }),
-    provideZonelessChangeDetection(),
-    provideRouter(routes),
-  ],
+  providers: [provideZonelessChangeDetection(), provideRouter(routes)],
 };

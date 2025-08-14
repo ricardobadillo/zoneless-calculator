@@ -35,7 +35,7 @@ describe('CalculatorComponent', () => {
     compiled = fixture.nativeElement;
     component = fixture.componentInstance;
     mockCalculatorService = TestBed.inject(
-      CalculatorService
+      CalculatorService,
     ) as unknown as MockCalculatorService;
   });
 

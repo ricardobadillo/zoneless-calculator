@@ -37,7 +37,7 @@ describe('AppComponent', () => {
 
     const mustHaveClasses =
       'bg-slate-600 flex items-center justify-center min-h-screen min-w-screen p-5'.split(
-        ' '
+        ' ',
       );
     const divClasses = divElement?.classList.value.split(' ');
 

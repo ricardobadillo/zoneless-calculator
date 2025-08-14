@@ -33,7 +33,7 @@ describe('CalculatorViewComponent', () => {
 
     const shouldHave =
       'bg-gray-100 mx-auto overflow-hidden relative rounded-xl shadow-xl text-gray-800 w-full'.split(
-        ' '
+        ' ',
       );
 
     shouldHave.forEach((cssClass: string) => {

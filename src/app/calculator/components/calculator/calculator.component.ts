@@ -69,7 +69,7 @@ export class CalculatorComponent {
   public resolveButtonPress(value: string): void {
     const pressedButton = this.calculatorButtons().find(
       (button: CalculatorButtonComponent) =>
-        button.contentValue()?.nativeElement.innerText === value
+        button.contentValue()?.nativeElement.innerText === value,
     );
 
     if (!pressedButton) return;
